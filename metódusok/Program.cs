@@ -1,4 +1,6 @@
-﻿namespace metódusok
+﻿using System.ComponentModel;
+
+namespace metódusok
 {
 	internal class Program
 	{
@@ -60,9 +62,9 @@
 			return szam*2;
 		}
 
-		static string Dublaz()
+		static void Dublaz()
 		{
-			return a;
+			
         }
 
 		static int Dublaz(int a, int b)
