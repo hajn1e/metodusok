@@ -12,14 +12,35 @@
 			int duplazott=Dublaz(a);
             Console.WriteLine(a);
             Console.WriteLine(duplazott);
-			Console.WriteLine(osszeg(10));
+			Console.WriteLine(Osszeg(10));
             
 			int elso = 5;
 			int masodik = 10;
 			Csere(ref elso,ref masodik);
 			Console.WriteLine(elso+" " + masodik);
+
+
+			string szoveg = "kaki,kaki";
+			int darab = SzovegElofordulas(szoveg, "kaki");
+			Console.WriteLine($"Hányszor szerepel kaki a szövegben:{darab}");
+
 			Console.ReadLine();
 		}
+
+
+
+		static int SzovegElofordulas(string szoveg, string alSzoveg)
+		{
+			int szam = 0;
+			int index= szoveg.IndexOf(alSzoveg);
+			while (index!= -1){
+				szam++;
+				index=szoveg.IndexOf(alSzoveg, index+1);
+			}
+			return szam;
+		}
+
+
 
 		static void koszonto()
 		{
@@ -48,7 +69,7 @@
 		{
 			return a+b;
 		}
-		static int osszeg(int a , int b=5, int c=2)
+		static int Osszeg(int a , int b=5, int c=2)
 		{
 			return a + b+c; 
 		}
